@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:tdd_app/data/models/number_trivia_model.dart';
 import 'package:tdd_app/domain/entities/number_trivia.dart';
 
-import '../../../../../fixtures/fixutre_reader.dart';
+import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
   final tNumberTriviaModel = NumberTriviaModel(number: 1, text: 'Test Text');
@@ -48,7 +48,7 @@ void main() {
         // arrange
         // we already have the model
         // act
-        final result = tNumberTriviaModel.toJson(tNumberTriviaModel);
+        final result = tNumberTriviaModel.toJson();
         // assert
         final expectedJsonMap = {"text": "Test Text", "number": 1};
         expect(result, expectedJsonMap);

@@ -17,10 +17,10 @@ class NumberTriviaModel extends NumberTrivia {
     );
   }
 
-  Map<String, dynamic> toJson(NumberTriviaModel numberTriviaModel) {
+  Map<String, dynamic> toJson() {
     return {
-      'text': numberTriviaModel.text,
-      'number': numberTriviaModel.number,
+      'text': text,
+      'number': number,
     };
   }
 }
